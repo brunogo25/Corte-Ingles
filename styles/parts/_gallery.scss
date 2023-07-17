@@ -1,0 +1,61 @@
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 0px 10%;
+    background-color: $main-back-color;
+    img{
+      transition: 0.2s ease-in-out;
+      width: 100%;
+    }
+    img:hover{
+      box-shadow: -5px -5px rgba(107, 147, 154, 0.492);
+      transform: skew(-2deg) scaleY(0.95);
+    }
+  &-card {
+    background-color: $white;
+    width: 100%;
+    justify-items: center;
+    flex-wrap: wrap;
+
+    &-noImgBox{
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      h2{
+        font-size: calc(15px + 1vw);
+        margin-bottom: 10px;
+        &:hover{
+        transform: skew(-10deg) scaleY(0.95);
+        }
+      }
+      p{
+        letter-spacing: 1px;
+        color: rgb(64, 63, 63);
+      }
+    }
+    &-price {
+      display: flex;
+      justify-content: space-between;
+      color: $button-green;
+      align-items: flex-end;
+      margin-top: 65px;
+      &-box{
+        
+        h4{
+          color: rgb(174, 171, 171);
+        }
+        h3{
+          font-size: 40px;
+        }
+      }
+      button{
+        background-color: transparent;
+        margin: 10px 0px;
+        padding: calc(4px + 1%) calc(10px + 2%);
+        color: $button-green;
+        border-color:  $button-green;
+      }
+    }
+  }
+}
